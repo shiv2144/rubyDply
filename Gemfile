@@ -17,6 +17,7 @@ gem 'rspec_api_documentation'
 gem 'doorkeeper'
 gem 'geocoder'
 gem 'validates_overlap'
+gem 'enumerize'
 
 group :development do
   gem 'spring'
