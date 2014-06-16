@@ -10,8 +10,7 @@ Rails.application.routes.draw do
         registrations: 'api/v1/custom_devise/registrations'
       }
       resources :users, only: [:index, :show] do
-        # get 'me', on: :collection
-        match '/me', action: 'users#me', via: :get
+        get 'me', on: :collection
       end
     end
   end
