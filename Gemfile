@@ -16,6 +16,7 @@ gem 'active_model_serializers'
 gem 'rspec_api_documentation'
 gem 'doorkeeper'
 gem 'geocoder'
+gem 'validates_overlap'
 
 group :development do
   gem 'spring'
