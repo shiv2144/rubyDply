@@ -15,6 +15,7 @@ gem 'wisper'
 gem 'active_model_serializers'
 gem 'rspec_api_documentation'
 gem 'doorkeeper'
+gem 'geocoder'
 
 group :development do
   gem 'spring'
