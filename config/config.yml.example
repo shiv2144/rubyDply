@@ -1,0 +1,14 @@
+development:
+  host_name: champ_manager.dev
+  reply_from: NoReply@champtradesman.com
+  smtp_login: notifications@champtradesman.com
+  smtp_password: M7TJTEwF
+  send_notifications: true
+  demo_mode: true
+production:
+  host_name: champtradesman.com
+  reply_from: NoReply@champtradesman.com
+  smtp_login: notifications@champtradesman.com
+  smtp_password: M7TJTEwF
+  send_notifications: true
+  demo_mode: false

@@ -1,0 +1,2 @@
+class Holiday < Event
+end

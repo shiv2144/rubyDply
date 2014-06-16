@@ -1,0 +1,2 @@
+class Vacation < Event
+end
