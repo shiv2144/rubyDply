@@ -34,9 +34,9 @@ module ChampApi
 
     # 404 catcher
     # http://joshsymonds.com/blog/2012/08/13/dynamic-error-pages-corrected/
-    config.after_initialize do |app|
-      app.routes.append{ match '*a', :to => 'application#render_404' } unless config.consider_all_requests_local
-    end
+    # config.after_initialize do |app|
+    #   app.routes.append{ match '*a', to: 'application#render_404' } unless config.consider_all_requests_local
+    # end
 
   end
 end
