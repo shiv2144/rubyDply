@@ -2,8 +2,7 @@ Rails.application.routes.draw do
 
   use_doorkeeper
 
-  # namespace :api, defaults: {format: 'json'}, as:'' do
-  namespace :api, defaults: {format: 'json'} do
+  # namespace :api, defaults: {format: 'json'} do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: :true) do
       # resources :users, :only => [:index]
       devise_for :users, path: '/users', controllers: {
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
         get 'me', on: :collection
       end
     end
-  end
+  # end
 
   root 'root#index'
 

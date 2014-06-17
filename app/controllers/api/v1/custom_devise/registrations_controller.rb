@@ -4,7 +4,7 @@ module Api
       class RegistrationsController < Devise::RegistrationsController
         include DeviseJsonAdapter
 
-        prepend_before_filter :require_no_authentication, :only => [ :create ]
+        prepend_before_filter :require_no_authentication, only: [ :create ]
 
         respond_to :json
 
@@ -14,7 +14,7 @@ module Api
           if resource.save
             if resource.active_for_authentication?
               sign_up(resource_name, resource)
-              # access_token = Doorkeeper::AccessToken.create!(:application_id => application_id, :resource_owner_id => user_id)
+              # access_token = Doorkeeper::AccessToken.create!(application_id:application_id,:resource_owner_id:user_id)
               render json: {
                 first_name: resource.first_name,
                 last_name: resource.last_name,

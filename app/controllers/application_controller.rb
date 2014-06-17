@@ -4,6 +4,8 @@ class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
   include CanCan::ControllerAdditions
 
+  before_filter :set_default_response_format
+
   # Handle authorization exception from CanCan
   rescue_from CanCan::AccessDenied do |exception|
     render json: {errors: ["Insufficient privileges"]}, status: :forbidden
@@ -27,6 +29,7 @@ class ApplicationController < ActionController::API
     rescue_from AbstractController::ActionNotFound, with: :render_404 # To prevent Rails 3.2.8 deprecation warnings
     rescue_from ActiveRecord::RecordNotFound, with: :render_404
   end
+
 
 private
 
@@ -53,4 +56,9 @@ private
     # render template: "errors/error", formats: [:html], layout: 'application', status: @status
     render json: {errors: [message]}, status: status
   end
+
+  def set_default_response_format
+    request.format = :json
+  end
+
 end
