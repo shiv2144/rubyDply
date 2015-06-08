@@ -22,6 +22,7 @@ group :development do
   gem 'spring'
   gem 'mina'
   gem 'quiet_assets'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
